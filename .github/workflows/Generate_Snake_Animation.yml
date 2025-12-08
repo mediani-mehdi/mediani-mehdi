@@ -13,13 +13,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Generate Snake (Black Background)
+      - name: Generate Snake (Full Black Theme)
         uses: Platane/snk@v3
         with:
           github_user_name: mediani-mehdi
           outputs: |
-            dist/github-snake.svg?palette=github-dark&background=000000
-            dist/github-snake-dark.svg?palette=github-dark&background=000000
+            dist/github-snake.svg?background=000000&color_empty=000000&color_snake=00ff99&color_dots=00cc66
+            dist/github-snake-dark.svg?background=000000&color_empty=000000&color_snake=00ff99&color_dots=00cc66
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v3
